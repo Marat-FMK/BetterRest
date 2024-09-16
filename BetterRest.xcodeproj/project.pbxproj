@@ -11,6 +11,7 @@
 		6CEDA1042C98D044007FB4C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEDA1032C98D044007FB4C5 /* ContentView.swift */; };
 		6CEDA1062C98D046007FB4C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CEDA1052C98D046007FB4C5 /* Assets.xcassets */; };
 		6CEDA1092C98D046007FB4C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CEDA1082C98D046007FB4C5 /* Preview Assets.xcassets */; };
+		6CEDA1102C98E32D007FB4C5 /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6CEDA10F2C98E32C007FB4C5 /* SleepCalculator.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		6CEDA1032C98D044007FB4C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6CEDA1052C98D046007FB4C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CEDA1082C98D046007FB4C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6CEDA10F2C98E32C007FB4C5 /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				6CEDA1012C98D044007FB4C5 /* BetterRestApp.swift */,
 				6CEDA1032C98D044007FB4C5 /* ContentView.swift */,
+				6CEDA10F2C98E32C007FB4C5 /* SleepCalculator.mlmodel */,
 				6CEDA1052C98D046007FB4C5 /* Assets.xcassets */,
 				6CEDA1072C98D046007FB4C5 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CEDA1042C98D044007FB4C5 /* ContentView.swift in Sources */,
+				6CEDA1102C98E32D007FB4C5 /* SleepCalculator.mlmodel in Sources */,
 				6CEDA1022C98D044007FB4C5 /* BetterRestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

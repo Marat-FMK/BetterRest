@@ -17,16 +17,16 @@ struct ContentView: View {
 //    @State private var alertMessage = "kj"
 //    @State private var showingAlert = false
     
-     private var result: String {
-        calculateBedTime()
-    }
+//     private var result: String {
+//        calculateBedTime()
+//    }
+    @State private var result = ""
     
     static var wakeUpTime: Date {
         var components = DateComponents()
         components.hour = 7
         components.minute = 0
         return Calendar.current.date(from: components) ?? .now
-        
     }
     
     var body: some View {
@@ -35,6 +35,10 @@ struct ContentView: View {
                 Section("When do you want to wake up? "){
                     DatePicker("Please, enter a time", selection: $wakeUP, displayedComponents: .hourAndMinute)
                         .labelsHidden()
+                        .onChange(of: wakeUP) { oldValue, newValue in
+                            print("vse ok")
+                            result = calculateBedTime()
+                        }
                         
                 }
                 Section("Desired amount of sleep"){

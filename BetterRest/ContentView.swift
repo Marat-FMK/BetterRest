@@ -48,12 +48,19 @@ struct ContentView: View {
                         }
                     }
                 }
-                VStack(alignment: .center) {
-                    Text("Bed time")
-                    Text(result)
-                    
-                }
+               
             }
+            VStack(alignment: .center) {
+                Text("Bed time")
+                    .foregroundStyle(.purple)
+                Text(result)
+                    .font(.largeTitle)
+                    .foregroundStyle(.red)
+                
+            }
+            Spacer()
+            Spacer()
+            Spacer()
             .navigationTitle("BetterRest")
 //            .toolbar {
 //                Button("Calculate", action: {})

@@ -13,13 +13,14 @@ struct ContentView: View {
     @State private var sleepAmount = 8.0
     @State private var cofeeAmount = 0
     
-    @State private var alertTitle = ""
-    @State private var alertMessage = "kj"
-    @State private var showingAlert = false
+//    @State private var alertTitle = ""
+//    @State private var alertMessage = "kj"
+//    @State private var showingAlert = false
     
      private var result: String {
         calculateBedTime()
     }
+    
     static var wakeUpTime: Date {
         var components = DateComponents()
         components.hour = 7
@@ -49,7 +50,7 @@ struct ContentView: View {
                 }
                 VStack(alignment: .center) {
                     Text("Bed time")
-                    Text("\(result)")
+                    Text(result)
                     
                 }
             }
@@ -67,6 +68,7 @@ struct ContentView: View {
     }
     
     func calculateBedTime() -> String {
+       
         do{
             let config = MLModelConfiguration()
             let model = try SleepCalculator(configuration: config)
@@ -78,17 +80,15 @@ struct ContentView: View {
             let prediction = try model.prediction(wake: Double(hour + minute), estimatedSleep: sleepAmount, coffee: Double(cofeeAmount))
             
             let sleepTime = wakeUP - prediction.actualSleep // current time for go to bed
-            
             return sleepTime.formatted(date: .omitted, time: .shortened)
 //            alertTitle = "Your ideal bed time is..."
-//            alertMessage = sleepTime.formatted(date: .omitted, time: .shortened) // .ommited - "опустить данные даты(в данном случаа)"
+//            alertMessage = sleepTime.formatted(date: .omitted, time: .shortened) 
+            
+           // // .ommited - "опустить" данные даты(в данном случаа)
             
         } catch {
             return  "Error"
-            
         }
-
-        
     }
 }
 
